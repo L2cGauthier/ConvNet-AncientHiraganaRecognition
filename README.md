@@ -50,13 +50,13 @@ from time import time
 
 ```python
 #Tells us which class is associated with which modern hiragana
-classmap = pd.read_csv('../input/kmnist_classmap.csv')
+classmap = pd.read_csv('dataset/kmnist_classmap.csv')
 
 #The set is already split in a training and a testing set, and has separated labels
-train_images = np.load('../input/kmnist-train-imgs.npz')['arr_0']
-test_images = np.load('../input/kmnist-test-imgs.npz')['arr_0']
-train_labels = np.load('../input/kmnist-train-labels.npz')['arr_0']
-test_labels = np.load('../input/kmnist-test-labels.npz')['arr_0']
+train_images = np.load('dataset/kmnist-train-imgs.npz')['arr_0']
+test_images = np.load('dataset/kmnist-test-imgs.npz')['arr_0']
+train_labels = np.load('dataset/kmnist-train-labels.npz')['arr_0']
+test_labels = np.load('dataset/kmnist-test-labels.npz')['arr_0']
 ```
 
 
@@ -388,201 +388,15 @@ score = model.evaluate(x_test, y_test)
 elapsed_time = time() - start
 ```
 
-    WARNING:tensorflow:From /opt/conda/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
-    Instructions for updating:
-    Use tf.cast instead.
     Epoch 1/100
     60000/60000 [==============================] - 9s 150us/step - loss: 0.4056 - acc: 0.9509
     Epoch 2/100
     60000/60000 [==============================] - 5s 78us/step - loss: 0.1544 - acc: 0.9878
     Epoch 3/100
     60000/60000 [==============================] - 5s 78us/step - loss: 0.0845 - acc: 0.9928
-    Epoch 4/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0491 - acc: 0.9959
-    Epoch 5/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0295 - acc: 0.9977
-    Epoch 6/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0162 - acc: 0.9990
-    Epoch 7/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0102 - acc: 0.9994
-    Epoch 8/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0065 - acc: 0.9996
-    Epoch 9/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0042 - acc: 0.9998
-    Epoch 10/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 0.0031 - acc: 0.9998
-    Epoch 11/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0025 - acc: 0.9998
-    Epoch 12/100
-    60000/60000 [==============================] - 5s 80us/step - loss: 0.0020 - acc: 0.9998
-    Epoch 13/100
-    60000/60000 [==============================] - 5s 81us/step - loss: 0.0017 - acc: 0.9998
-    Epoch 14/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 0.0015 - acc: 0.9998
-    Epoch 15/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0014 - acc: 0.9998
-    Epoch 16/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0013 - acc: 0.9998
-    Epoch 17/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0012 - acc: 0.9998
-    Epoch 18/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0012 - acc: 0.9998
-    Epoch 19/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0011 - acc: 0.9998
-    Epoch 20/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 0.0011 - acc: 0.9998
-    Epoch 21/100
-    60000/60000 [==============================] - 5s 80us/step - loss: 0.0010 - acc: 0.9998
-    Epoch 22/100
-    60000/60000 [==============================] - 5s 82us/step - loss: 0.0010 - acc: 0.9998
-    Epoch 23/100
-    60000/60000 [==============================] - 5s 81us/step - loss: 9.4760e-04 - acc: 0.9998
-    Epoch 24/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 9.8358e-04 - acc: 0.9998
-    Epoch 25/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 9.4256e-04 - acc: 0.9998
-    Epoch 26/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 9.1164e-04 - acc: 0.9998
-    Epoch 27/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 9.0615e-04 - acc: 0.9998
-    Epoch 28/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 8.7781e-04 - acc: 0.9998
-    Epoch 29/100
-    60000/60000 [==============================] - 5s 82us/step - loss: 8.6613e-04 - acc: 0.9998
-    Epoch 30/100
-    60000/60000 [==============================] - 5s 82us/step - loss: 8.4285e-04 - acc: 0.9998
-    Epoch 31/100
-    60000/60000 [==============================] - 5s 80us/step - loss: 8.7096e-04 - acc: 0.9998
-    Epoch 32/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 8.6607e-04 - acc: 0.9998
-    Epoch 33/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 8.6193e-04 - acc: 0.9998
-    Epoch 34/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 8.3979e-04 - acc: 0.9998
-    Epoch 35/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 8.2260e-04 - acc: 0.9998
-    Epoch 36/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 8.3212e-04 - acc: 0.9998
-    Epoch 37/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 8.3205e-04 - acc: 0.9998
-    Epoch 38/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 8.4393e-04 - acc: 0.9998
-    Epoch 39/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.8763e-04 - acc: 0.9998
-    Epoch 40/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.9936e-04 - acc: 0.9998
-    Epoch 41/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.9814e-04 - acc: 0.9998
-    Epoch 42/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.8050e-04 - acc: 0.9998
-    Epoch 43/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 8.1537e-04 - acc: 0.9998
-    Epoch 44/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.3986e-04 - acc: 0.9998
-    Epoch 45/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.9953e-04 - acc: 0.9998
-    Epoch 46/100
-    60000/60000 [==============================] - 5s 80us/step - loss: 7.8024e-04 - acc: 0.9998
-    Epoch 47/100
-    60000/60000 [==============================] - 5s 81us/step - loss: 7.8719e-04 - acc: 0.9998
-    Epoch 48/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.4885e-04 - acc: 0.9998
-    Epoch 49/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 8.0320e-04 - acc: 0.9998
-    Epoch 50/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.8675e-04 - acc: 0.9998
-    Epoch 51/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.4120e-04 - acc: 0.9998
-    Epoch 52/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.7090e-04 - acc: 0.9998
-    Epoch 53/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.4971e-04 - acc: 0.9998
-    Epoch 54/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.3742e-04 - acc: 0.9998
-    Epoch 55/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.6038e-04 - acc: 0.9998
-    Epoch 56/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.4197e-04 - acc: 0.9998
-    Epoch 57/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.4554e-04 - acc: 0.9998
-    Epoch 58/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.1623e-04 - acc: 0.9998
-    Epoch 59/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.4485e-04 - acc: 0.9998
-    Epoch 60/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.5457e-04 - acc: 0.9998
-    Epoch 61/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.3479e-04 - acc: 0.9998
-    Epoch 62/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.6111e-04 - acc: 0.9998
-    Epoch 63/100
-    60000/60000 [==============================] - 5s 80us/step - loss: 6.9543e-04 - acc: 0.9998
-    Epoch 64/100
-    60000/60000 [==============================] - 5s 81us/step - loss: 7.2567e-04 - acc: 0.9998
-    Epoch 65/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.2552e-04 - acc: 0.9998
-    Epoch 66/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.1499e-04 - acc: 0.9998
-    Epoch 67/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.3096e-04 - acc: 0.9998
-    Epoch 68/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.3622e-04 - acc: 0.9998
-    Epoch 69/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.4951e-04 - acc: 0.9998
-    Epoch 70/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.5320e-04 - acc: 0.9998
-    Epoch 71/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.6366e-04 - acc: 0.9998
-    Epoch 72/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.4892e-04 - acc: 0.9998
-    Epoch 73/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 6.8762e-04 - acc: 0.9998
-    Epoch 74/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.3734e-04 - acc: 0.9998
-    Epoch 75/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.2670e-04 - acc: 0.9998
-    Epoch 76/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.1417e-04 - acc: 0.9998
-    Epoch 77/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.3867e-04 - acc: 0.9998
-    Epoch 78/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.5563e-04 - acc: 0.9998
-    Epoch 79/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.4472e-04 - acc: 0.9998
-    Epoch 80/100
-    60000/60000 [==============================] - 5s 80us/step - loss: 7.6037e-04 - acc: 0.9998
-    Epoch 81/100
-    60000/60000 [==============================] - 5s 81us/step - loss: 7.4481e-04 - acc: 0.9998
-    Epoch 82/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.6911e-04 - acc: 0.9998
-    Epoch 83/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.4472e-04 - acc: 0.9998
-    Epoch 84/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 6.5133e-04 - acc: 0.9998
-    Epoch 85/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.5465e-04 - acc: 0.9998
-    Epoch 86/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.5416e-04 - acc: 0.9998
-    Epoch 87/100
-    60000/60000 [==============================] - 5s 81us/step - loss: 8.5436e-04 - acc: 0.9998
-    Epoch 88/100
-    60000/60000 [==============================] - 5s 82us/step - loss: 6.9681e-04 - acc: 0.9998
-    Epoch 89/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.2167e-04 - acc: 0.9998
-    Epoch 90/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.3920e-04 - acc: 0.9998
-    Epoch 91/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.1046e-04 - acc: 0.9998
-    Epoch 92/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.1952e-04 - acc: 0.9998
-    Epoch 93/100
-    60000/60000 [==============================] - 5s 79us/step - loss: 7.3378e-04 - acc: 0.9998
-    Epoch 94/100
-    60000/60000 [==============================] - 5s 81us/step - loss: 7.1404e-04 - acc: 0.9998
-    Epoch 95/100
-    60000/60000 [==============================] - 5s 80us/step - loss: 6.9617e-04 - acc: 0.9998
-    Epoch 96/100
-    60000/60000 [==============================] - 5s 78us/step - loss: 7.4388e-04 - acc: 0.9998
+    ...
+	...
+	...
     Epoch 97/100
     60000/60000 [==============================] - 5s 80us/step - loss: 7.1704e-04 - acc: 0.9998
     Epoch 98/100
@@ -635,15 +449,15 @@ plt.show()
 
 
 ```python
-#Find missclassified from the test set and put their index in a list
+#Find misclassified from the test set and put their index in a list
 predicted = model.predict(x_test)
 preds = [np.argmax(predicted[x]) for x in range(len(predicted))]
-missclassified= [i for i in range(len(predicted)) if preds[i]!=test_labels[i]]
+misclassified= [i for i in range(len(predicted)) if preds[i]!=test_labels[i]]
 
-#Images, Labels and Predictions for missclassified images
-images = test_images[[i for i in missclassified]]
-labels = test_labels[[i for i in missclassified]]
-missed_pred = [preds[i] for i in missclassified]
+#Images, Labels and Predictions for misclassified images
+images = test_images[[i for i in misclassified]]
+labels = test_labels[[i for i in misclassified]]
+missed_pred = [preds[i] for i in misclassified]
 
 figure = plt.figure(figsize=(20, 6*ceil(len(images)/10)))
 
@@ -666,7 +480,7 @@ for inst in range(len(images)):
             
 
     plt.subplot(ceil(len(images)/5), 10, 2*inst+2)
-    plt.bar(range(10), predicted[[i for i in missclassified]][inst])
+    plt.bar(range(10), predicted[[i for i in misclassified]][inst])
     #Formatting: no grid, no tick
     plt.grid(False)
     plt.xticks(range(10), range(10))
